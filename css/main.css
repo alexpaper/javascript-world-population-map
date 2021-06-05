@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #34495E;
+    font-family: sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 133px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.form input {
+    width: 95%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column;
+    }
+    .form {
+        width: 68%;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
+
+main {
+    height: calc(100vh - 133px);
+    width: 100%;
+}
+
+.map {
+    height: 100%;
+}
+
+.tooltip {
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    top: 133px;
+    left: 10px;
+    background: rgba(0, 0, 0, .3);
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-right: 1px solid rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.03rem;
+    color: #fff;
+    padding: 2px;
+    visibility: hidden;
+    z-index: 100;
+    transition: visibility 3s ease-in-out;
+}
+
+#info {
+    display: block;
+    position: absolute;
+    bottom: 28px;
+    right: 91px;
+    width: 45%;
+    border: none;
+    border-radius: 3px;
+    font-size: 9px;
+    text-align: center;
+    color: #222;
+    background: rgb(206, 203, 203);
+    z-index: 10;
+    padding: 2px;
+}
+
+@media(max-width:768px) {
+    #info {
+        width: 72%;
+        right: 50px;
+    }
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#728da5, rgb(13, 1, 39));
+    z-index: 101;
+    visibility: hidden;
+    transition: visibility 2s;
+}
+
+.loader span {
+    width: 200px;
+    height: 200px;
+    background: url('/imgs/earth.jpg');
+    border-radius: 50%;
+    background-size: 610px;
+    box-shadow: 1px 1px 10px 20px rgba(255, 255, 255, 0.2), inset 1px 1px 2px 3px rgba(255, 255, 255, 0.4), inset -6px 0 13px 4px rgba(230, 230, 230, 0.3);
+    transform: scale(1.3);
+    animation: rotate 13s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 610px 0px;
+    }
+}

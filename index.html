@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Population</title>
+    <link rel="icon" type="image/png" href="./imgs/icon.png">
+    <!-- MAPBOX CDN  -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- cdn for search location  -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="loader"><span></span></div>
+    <div id="info"></div>
+    <div class="tooltip">Actual country population: 100.000.000</div>
+    <header>
+        <div class="left">
+            <a href="/"> <img class="logo" src="./imgs/worldmap.svg" alt="logo"></a>
+            <h1>World Population</h1>
+        </div>
+        <form class="form" autocomplete="off"><input class="country" type="text" placeholder="Country Name"></form>
+    </header>
+    <main>
+        <div class="map"></div>
+    </main>
+
+    <script src="./js/mapboxK.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

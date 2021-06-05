@@ -65,7 +65,7 @@ function mapBox(center, zoom, popup){
         zoom:zoom,
     });  
     // Pop Up
-    var popup = new mapboxgl.Popup({ closeOnClick: false })
+    var mapPopup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(center)
     .setHTML(`<h1>${popup}</h1>`)
     .addTo(map);

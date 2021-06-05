@@ -131,7 +131,7 @@ main {
     background: radial-gradient(#728da5, rgb(13, 1, 39));
     z-index: 101;
     visibility: hidden;
-    transition: visibility 2s;
+    transition: visibility .5s;
 }
 
 .loader span {
